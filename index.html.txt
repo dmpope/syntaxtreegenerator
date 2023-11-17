@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Syntax Tree Generator</title>
+</head>
+<body>
+    <h1>Syntax Tree Generator</h1>
+    <form action="/syntax-tree" method="POST">
+        <label for="sentence">Enter a Sentence:</label><br>
+        <input type="text" id="sentence" name="sentence"><br><br>
+        <label for="custom_grammar">Enter custom grammar rules in NLTK format:</label><br>
+        <input type="text" id="custom_grammar" name="custom_grammar"><br><br>
+        <input type="submit" value="Generate Syntax Tree">
+    </form>
+    
+    {% if syntax_tree %}
+    <h2>Syntax Tree:</h2>
+    <div>{{ syntax_tree }}</div>
+    {% endif %}
+</body>
+</html>
